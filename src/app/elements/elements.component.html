@@ -1,0 +1,23 @@
+<div class='play-input'>
+	<div class='curr-score'>
+		<p>
+			<span>{{ this.countService.get() }}</span>
+			<span>/ 118</span>
+		</p>
+
+	</div><div class='ele-form'>
+		<div class='input-container'>
+			<input type='text' placeholder='element' (input)='eleGuessCheck($event)'>
+
+		</div><div class='submit-container'>
+			<input type='submit' value='give up' routerLink='/play'>
+		</div>
+	</div>
+</div>
+
+<div class='periodic-table'>
+	<div *ngFor = 'let ele of eleArr' class={{ele.class}} data-id={{ele.name}}>
+		<sup>{{ele.num}}</sup>
+		<p *ngIf='ele.showName === true'>{{ele.abbr}}</p>
+	</div>
+</div>

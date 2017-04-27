@@ -1,0 +1,15 @@
+<table>
+	<thead>
+		<tr>
+			<th>username</th>
+			<th>score</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let item of mywebapiservice.items">
+			<td><img *ngIf='convert(item.body).topping != "pizza topping"' src='app/images/{{convert(item.body).topping}}.png'> {{convert(item.body).username}}</td>
+			<td>{{convert(item.body).score}}</td>
+		</tr>
+	</tbody>
+</table>
