@@ -1,10 +1,10 @@
 <form #myform="ngForm" (ngSubmit)="scoreAndRedirect();">
-	<div class='play-container'>
-		<input type='text' placeholder='username' name='username' required maxlength='15' pattern='^[a-zA-Z0-9]{1,15}$' [(ngModel)]="mywebapiservice.username">
+	<div class='submit-container'>
+		<input type='text' placeholder='name' name='name' required maxlength='15' pattern='^[a-zA-Z0-9]{1,15}$' [(ngModel)]="mywebapiService.name">
 
-		<p class='error' *ngIf='!mywebapiservice.username.match(this.re)'>username can only contain alphanumeric characters</p>
+		<p class='error' *ngIf='!mywebapiService.name.match(this.re)'>name can only contain alphanumeric characters</p>
 
-		<select name='topping' [(ngModel)]="mywebapiservice.topping">
+		<select name='topping' [(ngModel)]="mywebapiService.topping">
 			<option disabled>pizza topping</option>
 			<option value='mushroom'>mushroom</option>
 			<option value='pepperoni'>pepperoni</option>

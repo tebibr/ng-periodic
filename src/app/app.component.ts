@@ -11,10 +11,5 @@ import { CountService } from './services/count.service';
 export class AppComponent {
 	constructor(private countService: CountService) { }
 
-	//called on elements page to reset the score
-	resetScore() {
-		this.countService.reset();
-	}
-
   title = 'how many elements can you name?';
 }

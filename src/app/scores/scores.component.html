@@ -1,15 +1,15 @@
 <table>
 	<thead>
 		<tr>
-			<th>username</th>
+			<th>name</th>
 			<th>score</th>
 		</tr>
 	</thead>
 
 	<tbody>
-		<tr *ngFor="let item of mywebapiservice.items">
-			<td><img *ngIf='convert(item.body).topping != "pizza topping"' src='app/images/{{convert(item.body).topping}}.png'> {{convert(item.body).username}}</td>
-			<td>{{convert(item.body).score}}</td>
+		<tr *ngFor="let result of mywebapiService.results">
+			<td><img *ngIf='result.topping != "pizza topping"' src='http://tebaibrahim.com/periodic-table/images/{{result.topping}}.png'> {{result.name}}</td>
+			<td>{{result.score}}</td>
 		</tr>
 	</tbody>
 </table>
